@@ -1,0 +1,7 @@
+content delete-read-emails chrome/content/
+
+overlay chrome://messenger/content/messenger.xul chrome://delete-read-emails/content/button.xul
+overlay chrome://messenger/content/messengercompose/messengercompose.xul chrome://delete-read-emails/content/compose.xul
+
+
+style chrome://global/content/customizeToolbar.xul chrome://delete-read-emails/content/button.css

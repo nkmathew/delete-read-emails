@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css"
+                 href="chrome://delete-read-emails/content/button.css"?>
+
+<!DOCTYPE overlay >
+<overlay id="delete-read-emails-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script src="chrome://delete-read-emails/content/button.js"/>
+
+    <!-- Thunderbird Mail Toolbar -->
+    <toolbarpalette id="MailToolbarPalette">
+        <toolbarbutton id="btn-delete-read-emails"/>
+    </toolbarpalette>
+
+    <!-- Button Properties -->
+    <toolbarbutton id="btn-delete-read-emails"
+        label="Delete Read Emails"
+        tooltiptext="Delete All Read Emails"
+        oncommand="deleteReadEmails()"/>
+</overlay>
