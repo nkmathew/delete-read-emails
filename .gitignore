@@ -1,1 +1,5 @@
+# The packaged extension
 *.xpi
+
+# NPM packages
+/node_modules
