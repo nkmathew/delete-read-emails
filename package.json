@@ -1,0 +1,20 @@
+{
+  "name": "delete-read-emails",
+  "version": "0.1.0",
+  "description": "Thunderbird extension that adds a toolbar button for deleting all the read emails in your inbox",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/nkmathew/delete-read-emails.git"
+  },
+  "author": "nkmathew",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nkmathew/delete-read-emails/issues"
+  },
+  "homepage": "https://github.com/nkmathew/delete-read-emails#readme",
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1"
+  }
+}

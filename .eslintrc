@@ -1,0 +1,38 @@
+{
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "Component": 1,
+    "Cu": 1,
+    "Cc": 1,
+    "Ci": 1,
+    "MailUtils": 1,
+    "MsgMoveMessage": 1,
+    "gFolderDisplay": 1,
+    "messenger": 1,
+    "gDBView": 1
+  },
+  "extends": "eslint:recommended",
+  "parser": "babel-eslint",
+  "rules": {
+    "strict": 0,
+    "no-var": 2,
+    "indent": [
+      "error",
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ]
+  }
+}
