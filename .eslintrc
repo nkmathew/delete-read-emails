@@ -10,7 +10,8 @@
     "MailUtils": 1,
     "MsgMoveMessage": 1,
     "gFolderDisplay": 1,
-    "gDBView": 1
+    "gDBView": 1,
+    "goDoCommand": 1
   },
   "extends": "eslint:recommended",
   "parser": "babel-eslint",

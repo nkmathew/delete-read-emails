@@ -22,7 +22,7 @@ function inspect(object, own = true) {
         alert(key + ' = ' + object[key]);
       }
     } else {
-        alert(key + ' = ' + object[key]);
+      alert(key + ' = ' + object[key]);
     }
   }
 }
