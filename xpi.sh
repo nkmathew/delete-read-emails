@@ -17,4 +17,13 @@ EOF
 xpi_name="delete-read-emails@nkmathew.net.$version.xpi"
 rm -f $xpi_name
 7z a $xpi_name install.rdf chrome.manifest chrome/ | grep Compressing
-echo -e "\n>>> $xpi_name"
+
+# Output the xpi size and name
+xpi_size=$(stat -c%s $xpi_name)
+xpi_size=$(($xpi_size/1000))
+echo -e "\nSize: ${xpi_size}KB\nName: $xpi_name"
+
+# Don't restart Thunderbird if flag "-n" is passed
+if [[ ! $1 == -n ]]; then
+  wget --quiet --post-file=$xpi_name http://127.0.0.1:8888/
+fi
