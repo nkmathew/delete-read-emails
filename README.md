@@ -26,8 +26,23 @@ and hitting delete everytime?
       `xpi` and install it in the currently running instance of Thunderbird which will
       restart immediately since most Thunderbird extensions are [XUL][1] based
 
+### Installation
+
+Until I can get the add-on to be approved for **AMO** you'll have to install it
+manually by building the **XPI** and drag-dropping it in the Add-ons Manager
+
+The toolbar button usually doesn't appear on first run meaning you'll have to right
+click on the mail toolbar, click customize and drag and drop the icon to the toolbar
+as shown below:
+
+![](http://image.prntscr.com/image/58a758aabcb34789b1a3c1a1cf2b6a5c.png)
+
 ### Sreenshots
 
++ Toolbar button
+![](http://image.prntscr.com/image/5dc0a8d28b0040c5bda0584ca83d3409.png)
+
++ Add-ons Manager
 ![](http://image.prntscr.com/image/1041eeb759e94367b2d0dab830f7003e.png)
 
 ---
