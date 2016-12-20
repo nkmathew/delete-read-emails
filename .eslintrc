@@ -4,14 +4,12 @@
   },
   "globals": {
     "Component": 1,
-    "Cu": 1,
-    "Cc": 1,
-    "Ci": 1,
     "MailUtils": 1,
     "MsgMoveMessage": 1,
     "gFolderDisplay": 1,
     "gDBView": 1,
     "goDoCommand": 1,
+    "Components": 1,
     "fixIterator": 1
   },
   "extends": "eslint:recommended",
@@ -19,21 +17,10 @@
   "rules": {
     "strict": 0,
     "no-var": 2,
-    "indent": [
-      "error",
-      2
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ]
+    "eqeqeq": ["error", "always"],
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes":  ["error", "single"],
+    "semi": ["error", "always"]
   }
 }
