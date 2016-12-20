@@ -28,6 +28,22 @@ function inspect(object, own = true) {
 }
 
 /**
+ * Returns the number of read emails in the current folder
+ */
+/* exported deleteReadEmails */
+function countReadEmails() {
+  let enumMessages = gFolderDisplay.displayedFolder.messages;
+  let iterMsgHeaders = fixIterator(enumMessages, Ci.nsIMsgDBHdr);
+  let readCount = 0;
+  for (let msgHeader in iterMsgHeaders) {
+    if (msgHeader.isRead) {
+      readCount++;
+    }
+  }
+  return readCount;
+}
+
+/**
  * Toolbar button callback function
  */
 /* exported deleteReadEmails */
@@ -36,10 +52,10 @@ function deleteReadEmails() {
   let count = treeView.rowCount;
   let messenger = Cc['@mozilla.org/messenger;1'].createInstance(Ci.nsIMessenger);
   for (let i = 0; i < count; i++) {
-    let email = messenger.msgHdrFromURI(gDBView.getURIForViewIndex(i));
-    if (email.isRead) {
+    let msgHeader = messenger.msgHdrFromURI(gDBView.getURIForViewIndex(i));
+    if (msgHeader.isRead) {
       treeView.selection.rangedSelect(i, i, true);
     }
   }
-  goDoCommand('cmd_delete');
+  // goDoCommand('cmd_delete');
 }

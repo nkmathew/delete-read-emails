@@ -11,7 +11,8 @@
     "MsgMoveMessage": 1,
     "gFolderDisplay": 1,
     "gDBView": 1,
-    "goDoCommand": 1
+    "goDoCommand": 1,
+    "fixIterator": 1
   },
   "extends": "eslint:recommended",
   "parser": "babel-eslint",
