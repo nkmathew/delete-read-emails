@@ -6,6 +6,9 @@
  *
  */
 
+const Cc = Components.classes;
+const Ci = Components.interfaces;
+
 /**
  * Poor man's debugger
  * Displays all the attributes of the object
@@ -61,6 +64,22 @@ function deleteReadEmails() {
 }
 
 /**
+ * Reads preferences set in about:config
+ */
+function getPreference(name) {
+  let prefs = Cc['@mozilla.org/preferences-service;1']
+    .getService(Components.interfaces.nsIPrefService);
+  let branch = prefs.getBranch('extensions.delete-read-emails.');
+  if (branch.getPrefType(name) === branch.PREF_BOOL) {
+    return branch.getBoolPref(name);
+  } else if (branch.getPrefType(name) === branch.PREF_STRING) {
+    return branch.getCharPref(name);
+  } else {
+    return '';
+  }
+}
+
+/**
  * Defines an event listener that monitors a change in the current folder's message
  * count and displays the number of read messages in the add-on's toolbar button
  *
@@ -78,7 +97,14 @@ let FolderListener = {
     // Calculate the number of read emails everytime a message is marked as read
     let readEmails = countReadEmails();
     let button = document.getElementById('btn-delete-read-emails');
-    button.label = `Delete Read Emails (${readEmails})`;
+    let label = 'Delete Read Emails';
+    if (getPreference('buttonlabel').trim().length !== 0) {
+      label = getPreference('buttonlabel');
+    }
+    if (getPreference('showcount')) {
+      label = `${label} (${readEmails})`;
+    }
+    button.label = label;
   }
 };
 
