@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin" type="text/css"?>
+<?xml-stylesheet href="chrome://delete-read-emails/content/prefs.css" type="text/css"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/ -->
+<!DOCTYPE prefwindow [
+  <!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd">
+  %globalDTD;
+  <!ENTITY % prefsDTD SYSTEM "chrome://mintrayr/locale/prefs.dtd">
+  %prefsDTD;
+  <!ENTITY % defprefsDTD SYSTEM "chrome://mintrayr-locale/content/prefs.dtd">
+  %defprefsDTD;
+]>
+
+
+<prefwindow
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  title="Delete Read Emails: Preferences">
+  <prefpane id="paneMain" label="I am a label">
+    <preferences>
+      <preference
+        id="buttonlabel"
+        name="extensions.delete-read-emails.buttonlabel"
+        type="string"/>
+      <preference
+        id="showcount"
+        name="extensions.delete-read-emails.showcount"
+        type="bool"/>
+    </preferences>
+    <groupbox>
+      <checkbox
+        preference="showcount"
+        label="Show the number of read emails in the toolbar button"/>
+    </groupbox>
+    <groupbox>
+      <vbox>
+        <label value="Button label:"/>
+        <textbox
+          preference="buttonlabel"
+          placeholder="Enter label for toolbar button"
+          maxlength="50"/>
+      </vbox>
+    </groupbox>
+  </prefpane>
+</prefwindow>

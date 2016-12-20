@@ -7,8 +7,10 @@
     <em:name>Delete Read Emails</em:name>
     <em:version>0.1.0</em:version>
     <em:creator>nkmathew</em:creator>
+    <em:developer>nkmathew</em:developer>
     <em:iconURL>chrome://delete-read-emails/content/images/delete-icon.png</em:iconURL>
     <em:description>Adds a button in Thunderbird's toolbar that enables you to delete all your read emails at once</em:description>
+    <em:optionsURL>chrome://delete-read-emails/content/prefs.xul</em:optionsURL>
     <em:targetApplication>
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
