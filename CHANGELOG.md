@@ -2,6 +2,7 @@
 
 + Features:
 
+  - Add French and Spanish localization
   - Can now display a live read email count in the toolbar button
   - User is able to define the name of the toolbar button and hide/show the read
     email count next to the button name
