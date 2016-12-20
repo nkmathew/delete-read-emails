@@ -7,17 +7,14 @@
 <!DOCTYPE prefwindow [
   <!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd">
   %globalDTD;
-  <!ENTITY % prefsDTD SYSTEM "chrome://mintrayr/locale/prefs.dtd">
+  <!ENTITY % prefsDTD SYSTEM "chrome://delete-read-emails/locale/prefs.dtd">
   %prefsDTD;
-  <!ENTITY % defprefsDTD SYSTEM "chrome://mintrayr-locale/content/prefs.dtd">
-  %defprefsDTD;
 ]>
-
 
 <prefwindow
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
-  title="Delete Read Emails: Preferences">
-  <prefpane id="paneMain" label="I am a label">
+  title="&delete-read-emails.prefs.windowtitle;">
+  <prefpane>
     <preferences>
       <preference
         id="buttonlabel"
@@ -31,14 +28,14 @@
     <groupbox>
       <checkbox
         preference="showcount"
-        label="Show the number of read emails in the toolbar button"/>
+        label="&delete-read-emails.prefs.checkboxlabel;"/>
     </groupbox>
     <groupbox>
       <vbox>
-        <label value="Button label:"/>
+        <label value="&delete-read-emails.prefs.buttonlabel;"/>
         <textbox
           preference="buttonlabel"
-          placeholder="Enter label for toolbar button"
+          placeholder="&delete-read-emails.prefs.placeholder;"
           maxlength="50"/>
       </vbox>
     </groupbox>

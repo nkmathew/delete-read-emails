@@ -2,11 +2,22 @@
 <?xml-stylesheet type="text/css"
                  href="chrome://delete-read-emails/content/button.css"?>
 
-<!DOCTYPE overlay >
-<overlay id="delete-read-emails-overlay"
-         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<!DOCTYPE prefwindow [
+  <!ENTITY % globalDTD SYSTEM "chrome://global/locale/global.dtd">
+  %globalDTD;
+  <!ENTITY % prefsDTD SYSTEM "chrome://delete-read-emails/locale/button.dtd">
+  %prefsDTD;
+]>
 
+<overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
     <script src="chrome://delete-read-emails/content/button.js"/>
+
+    <!-- Localized strings accessible from Javascript -->
+    <stringbundleset id="stringbundleset">
+      <stringbundle
+        id="strings-delete-read-emails"
+        src="chrome://delete-read-emails/locale/strings.properties"/>
+    </stringbundleset>
 
     <!-- Thunderbird Mail Toolbar -->
     <toolbarpalette id="MailToolbarPalette">
@@ -15,7 +26,7 @@
 
     <!-- Button Properties -->
     <toolbarbutton id="btn-delete-read-emails"
-        label="Delete Read Emails"
-        tooltiptext="Delete All Read Emails"
+        label="&delete-read-emails.button.label;"
+        tooltiptext="&delete-read-emails.button.tooltip;"
         oncommand="deleteReadEmails()"/>
 </overlay>

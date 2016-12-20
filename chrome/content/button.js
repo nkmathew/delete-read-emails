@@ -96,15 +96,15 @@ let FolderListener = {
   OnItemIntPropertyChanged: function() {
     // Calculate the number of read emails everytime a message is marked as read
     let readEmails = countReadEmails();
-    let button = document.getElementById('btn-delete-read-emails');
-    let label = 'Delete Read Emails';
+    let stringBundle = document.getElementById('strings-delete-read-emails');
+    let label = stringBundle.getString('buttonLabel'); // Localized button label
     if (getPreference('buttonlabel').trim().length !== 0) {
       label = getPreference('buttonlabel');
     }
     if (getPreference('showcount')) {
       label = `${label} (${readEmails})`;
     }
-    button.label = label;
+    document.getElementById('btn-delete-read-emails').label = label;
   }
 };
 

@@ -1,0 +1,4 @@
+<!ENTITY delete-read-emails.prefs.buttonlabel "Le label de Bouton:">
+<!ENTITY delete-read-emails.prefs.checkboxlabel "Afficher le nombre de messages lus dans le bouton de la barre d'outils">
+<!ENTITY delete-read-emails.prefs.placeholder "Entrez le label du bouton de la barre d'outils">
+<!ENTITY delete-read-emails.prefs.windowtitle "Delete Read Emails: Préférences">
