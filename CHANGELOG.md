@@ -1,5 +1,9 @@
 ### Next Release
 
++ Features:
+
+  - Can now display a live read email count in the toolbar button
+
 + Fixes:
 
   - Removed message count alert shown when button is clicked
