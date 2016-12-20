@@ -75,9 +75,7 @@ let FolderListener = {
    *
    */
   OnItemIntPropertyChanged: function() {
-    /*
-     * Calculate the number of read emails everytime a message is marked as read
-     */
+    // Calculate the number of read emails everytime a message is marked as read
     let readEmails = countReadEmails();
     let button = document.getElementById('btn-delete-read-emails');
     button.label = `Delete Read Emails (${readEmails})`;
