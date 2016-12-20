@@ -30,6 +30,7 @@ function inspect(object) {
 function deleteReadEmails() {
   let treeView = gDBView.QueryInterface(Ci.nsITreeView);
   let count = treeView.rowCount;
+  let messenger = Cc['@mozilla.org/messenger;1'].createInstance(Ci.nsIMessenger);
   for (let i = 0; i < count; i++) {
     let email = messenger.msgHdrFromURI(gDBView.getURIForViewIndex(i));
     if (email.isRead) {

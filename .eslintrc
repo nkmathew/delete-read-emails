@@ -10,7 +10,6 @@
     "MailUtils": 1,
     "MsgMoveMessage": 1,
     "gFolderDisplay": 1,
-    "messenger": 1,
     "gDBView": 1
   },
   "extends": "eslint:recommended",
