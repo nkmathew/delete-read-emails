@@ -14,11 +14,15 @@
  *
  */
 /* exported inspect */
-function inspect(object) {
+function inspect(object, own = true) {
   alert('Found: ' + Object.keys(object).length + ' Type: ' + typeof object);
   for (let key in object) {
-    if (object.hasOwnProperty(key)) {
-      alert(key + ' = ' + object[key]);
+    if (own) {
+      if (object.hasOwnProperty(key)) {
+        alert(key + ' = ' + object[key]);
+      }
+    } else {
+        alert(key + ' = ' + object[key]);
     }
   }
 }
