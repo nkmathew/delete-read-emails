@@ -5,7 +5,7 @@ Thunderbird folder with a click of a button. Created because I seem to be the on
 one who has a need for this functionality or I'm somehow doing this the wrong way.
 
 How does everyone else delete the 30+ read emails over and over without selecting
-and hitting delete everytime?
+and hitting delete every time?
 
 ### Development
 
@@ -45,9 +45,23 @@ as shown below:
 + Add-ons Manager
 ![](http://image.prntscr.com/image/1041eeb759e94367b2d0dab830f7003e.png)
 
+### Credits
+
+The [Thunderbird API][6] is really poorly documented forcing you to rely on grepping
+through [Thunderbird's source code][5] and some well implemented Thunderbird
+extensions for working examples to build from. It can be one gruelling experience.
+
+I found myself going through the source for these two extensions way too much and as
+such I have to give due credit. I learnt a lot from them:
+
+  + https://github.com/nmaier/mintrayr
+  + https://github.com/RealRaven2000/QuickFolders
+
 ---
 
 [1]: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL
 [2]: https://www.cygwin.com/
 [3]: https://addons.mozilla.org/en-us/firefox/add-on/autoinstaller/
 [4]: http://msys2.github.io/
+[5]: https://dxr.mozilla.org/comm-central/source/
+[6]: https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Thunderbird_API_documentation
