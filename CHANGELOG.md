@@ -1,5 +1,5 @@
-### v0.1.0 - December 2016
+### v0.1.0 - December 21, 2016
 
 + Features:
 
-  -
+  - Can select and delete the read emails in the currently selected folder
