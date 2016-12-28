@@ -9,6 +9,8 @@
 const Cc = Components.classes;
 const Ci = Components.interfaces;
 
+let DeleteReadEmails = {};
+
 /**
  * Poor man's debugger
  * Displays all the attributes of the object
@@ -16,8 +18,7 @@ const Ci = Components.interfaces;
  * For when you don't feel like setting up the debugger in Firefox
  *
  */
-/* exported inspect */
-function inspect(object, own = true) {
+DeleteReadEmails.inspect = function (object, own = true) {
   alert(`Found: ${Object.keys(object).length} Type: ${typeof object}`);
   for (let key in object) {
     if (own) {
@@ -28,13 +29,12 @@ function inspect(object, own = true) {
       alert(`${key} = ${object[key]}`);
     }
   }
-}
+};
 
 /**
  * Returns the number of read emails in the current folder
  */
-/* exported deleteReadEmails */
-function countReadEmails() {
+DeleteReadEmails.countReadEmails = function() {
   let enumMessages = gFolderDisplay.displayedFolder.messages;
   let iterMsgHeaders = fixIterator(enumMessages, Ci.nsIMsgDBHdr);
   let readCount = 0;
@@ -44,13 +44,12 @@ function countReadEmails() {
     }
   }
   return readCount;
-}
+};
 
 /**
  * Toolbar button callback function
  */
-/* exported deleteReadEmails */
-function deleteReadEmails() {
+DeleteReadEmails.deleteReadEmails = function() {
   let treeView = gDBView.QueryInterface(Ci.nsITreeView);
   let count = treeView.rowCount;
   let messenger = Cc['@mozilla.org/messenger;1'].createInstance(Ci.nsIMessenger);
@@ -61,12 +60,12 @@ function deleteReadEmails() {
     }
   }
   goDoCommand('cmd_delete');
-}
+};
 
 /**
  * Reads preferences set in about:config
  */
-function getPreference(name) {
+DeleteReadEmails.getPreference = function(name) {
   let prefs = Cc['@mozilla.org/preferences-service;1']
     .getService(Components.interfaces.nsIPrefService);
   let branch = prefs.getBranch('extensions.delete-read-emails.');
@@ -77,7 +76,7 @@ function getPreference(name) {
   } else {
     return '';
   }
-}
+};
 
 /**
  * Defines an event listener that monitors a change in the current folder's message
@@ -95,16 +94,18 @@ let FolderListener = {
    */
   OnItemIntPropertyChanged: function() {
     // Calculate the number of read emails everytime a message is marked as read
-    let readEmails = countReadEmails();
     let stringBundle = document.getElementById('strings-delete-read-emails');
-    let label = stringBundle.getString('buttonLabel'); // Localized button label
-    if (getPreference('buttonlabel').trim().length !== 0) {
-      label = getPreference('buttonlabel');
+    let prefLabel = DeleteReadEmails.getPreference('buttonlabel').trim();
+    let buttonLabel = stringBundle.getString('buttonLabel');
+    let readEmails = DeleteReadEmails.countReadEmails();
+    // Use custom button label if defined by the user
+    if (prefLabel.length !== 0) {
+      buttonLabel = prefLabel;
     }
-    if (getPreference('showcount')) {
-      label = `${label} (${readEmails})`;
+    if (DeleteReadEmails.getPreference('showcount')) {
+      buttonLabel = `${buttonLabel} (${readEmails})`;
     }
-    document.getElementById('btn-delete-read-emails').label = label;
+    document.getElementById('btn-delete-read-emails').label = buttonLabel;
   }
 };
 

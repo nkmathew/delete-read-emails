@@ -28,5 +28,5 @@
     <toolbarbutton id="btn-delete-read-emails"
         label="&delete-read-emails.button.label;"
         tooltiptext="&delete-read-emails.button.tooltip;"
-        oncommand="deleteReadEmails()"/>
+        oncommand="DeleteReadEmails.deleteReadEmails()"/>
 </overlay>
