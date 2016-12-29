@@ -35,15 +35,17 @@ The toolbar button usually doesn't appear on first run meaning you'll have to ri
 click on the mail toolbar, click customize and drag and drop the icon to the toolbar
 as shown below:
 
-![](http://image.prntscr.com/image/58a758aabcb34789b1a3c1a1cf2b6a5c.png)
+![](http://image.prntscr.com/image/129cf6049466423b9a92e1bd363dae5b.png)
 
-### Sreenshots
+### Screenshots
 
 + Toolbar button
-![](http://image.prntscr.com/image/5dc0a8d28b0040c5bda0584ca83d3409.png)
+
+![](http://image.prntscr.com/image/a02fce8f0df54c9ba07e4a7bde86d436.png)
 
 + Add-ons Manager
-![](http://image.prntscr.com/image/1041eeb759e94367b2d0dab830f7003e.png)
+
+![](http://image.prntscr.com/image/79e3b9332b23485f9c9918e63acc9db1.png)
 
 ### Credits
 
