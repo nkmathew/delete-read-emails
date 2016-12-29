@@ -6,6 +6,8 @@
   - Can now display a live read email count in the toolbar button
   - User is able to define the name of the toolbar button and hide/show the read
     email count next to the button name
+  - User is able to bold the toolbar button label for visibility through the
+    preference window in the Add-ons Manager
 
 + Fixes:
 
@@ -14,6 +16,7 @@
     [Icon Archive][2] and removed the previously cropped and resized ones.
   - The toolbar button now looks like the other native buttons and even responds to
     alternative Thunderbird themes like [TT Deep Dark][1]
+  - Toolbar button icon doesn't resize in some Thunderbird themes
 
 ### v0.1.0 - December 21, 2016
 
