@@ -57,6 +57,8 @@ such I have to give due credit. I learnt a lot from them:
   + https://github.com/nmaier/mintrayr
   + https://github.com/RealRaven2000/QuickFolders
 
+Icon by [Seanau][7]
+
 ---
 
 [1]: https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL
@@ -65,3 +67,4 @@ such I have to give due credit. I learnt a lot from them:
 [4]: http://msys2.github.io/
 [5]: https://dxr.mozilla.org/comm-central/source/
 [6]: https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Thunderbird_API_documentation
+[7]: http://www.iconarchive.com/show/email-icons-by-seanau/Delete-icon.html
