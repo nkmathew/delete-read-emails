@@ -9,7 +9,8 @@
 const Cc = Components.classes;
 const Ci = Components.interfaces;
 
-let DeleteReadEmails = {};
+/* eslint no-var:0 */
+var DeleteReadEmails = DeleteReadEmails || {};
 
 /**
  * Poor man's debugger
