@@ -5,7 +5,7 @@
   <Description about="urn:mozilla:install-manifest">
     <em:id>delete-read-emails@nkmathew.net</em:id>
     <em:name>Delete Read Emails</em:name>
-    <em:version>0.1.0</em:version>
+    <em:version>0.2.0</em:version>
     <em:creator>nkmathew</em:creator>
     <em:developer>nkmathew</em:developer>
     <em:iconURL>chrome://delete-read-emails/content/images/delete-256x256.png</em:iconURL>

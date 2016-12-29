@@ -1,4 +1,4 @@
-### Next Release
+### v0.2.0 - December 29, 2016
 
 + Features:
 
