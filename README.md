@@ -47,6 +47,10 @@ as shown below:
 
 ![](http://image.prntscr.com/image/79e3b9332b23485f9c9918e63acc9db1.png)
 
++ Preference Window
+
+![](http://image.prntscr.com/image/3ae8ebd02f724ccb958293fd18747e01.png)
+
 ### Credits
 
 The [Thunderbird API][6] is really poorly documented forcing you to rely on grepping
