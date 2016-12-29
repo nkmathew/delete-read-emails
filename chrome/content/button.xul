@@ -10,23 +10,25 @@
 ]>
 
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-    <script src="chrome://delete-read-emails/content/button.js"/>
+  <script src="chrome://delete-read-emails/content/button.js"/>
 
-    <!-- Localized strings accessible from Javascript -->
-    <stringbundleset id="stringbundleset">
-      <stringbundle
-        id="strings-delete-read-emails"
-        src="chrome://delete-read-emails/locale/strings.properties"/>
-    </stringbundleset>
+  <!-- Localized strings accessible from Javascript -->
+  <stringbundleset id="stringbundleset">
+    <stringbundle
+      id="strings-delete-read-emails"
+      src="chrome://delete-read-emails/locale/strings.properties"/>
+  </stringbundleset>
 
-    <!-- Thunderbird Mail Toolbar -->
-    <toolbarpalette id="MailToolbarPalette">
-        <toolbarbutton id="btn-delete-read-emails"/>
-    </toolbarpalette>
+  <!-- Thunderbird Mail Toolbar -->
+  <toolbarpalette id="MailToolbarPalette">
+    <toolbarbutton id="btn-delete-read-emails"/>
+  </toolbarpalette>
 
-    <!-- Button Properties -->
-    <toolbarbutton id="btn-delete-read-emails"
-        label="&delete-read-emails.button.label;"
-        tooltiptext="&delete-read-emails.button.tooltip;"
-        oncommand="DeleteReadEmails.deleteReadEmails()"/>
+  <!-- Button Properties -->
+  <toolbarbutton
+    id="btn-delete-read-emails"
+    label="&delete-read-emails.button.label;"
+    tooltiptext="&delete-read-emails.button.tooltip;"
+    class="toolbarbutton-1"
+    oncommand="DeleteReadEmails.deleteReadEmails()"/>
 </overlay>
