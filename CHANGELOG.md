@@ -1,3 +1,12 @@
+### v0.2.1 - December 29, 2016
+
++ Fixes:
+
+  - Add-on fails general tests due to invalid maximum version number
+  - `<prefwindow>` must have an id according to AMO security tests
+  - AMO recommends the [add-on type][3] be specified in install manifest
+
+
 ### v0.2.0 - December 29, 2016
 
 + Features:
@@ -28,3 +37,4 @@
 
 [1]: https://addons.mozilla.org/en-us/thunderbird/addon/tt-deepdark/
 [2]: http://www.iconarchive.com/show/email-icons-by-seanau/Delete-icon.html
+[3]: https://developer.mozilla.org/en-US/Add-ons/Install_Manifests#type
