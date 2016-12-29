@@ -10,9 +10,18 @@
 + Fixes:
 
   - Removed message count alert shown when button is clicked
+  - The icon is no longer cropped. Redowloaded the original icon from
+    [Icon Archive][2] and removed the previously cropped and resized ones.
+  - The toolbar button now looks like the other native buttons and even responds to
+    alternative Thunderbird themes like [TT Deep Dark][1]
 
 ### v0.1.0 - December 21, 2016
 
 + Features:
 
   - Can select and delete the read emails in the currently selected folder
+
+---
+
+[1]: https://addons.mozilla.org/en-us/thunderbird/addon/tt-deepdark/
+[2]: http://www.iconarchive.com/show/email-icons-by-seanau/Delete-icon.html
