@@ -19,7 +19,7 @@ var DeleteReadEmails = DeleteReadEmails || {};
  * For when you don't feel like setting up the debugger in Firefox
  *
  */
-DeleteReadEmails.inspect = function (object, own = true) {
+DeleteReadEmails.inspect = function(object, own = true) {
   alert(`Found: ${Object.keys(object).length} Type: ${typeof object}`);
   for (let key in object) {
     if (own) {
@@ -74,9 +74,8 @@ DeleteReadEmails.getPreference = function(name) {
     return branch.getBoolPref(name);
   } else if (branch.getPrefType(name) === branch.PREF_STRING) {
     return branch.getCharPref(name);
-  } else {
-    return '';
   }
+  return '';
 };
 
 /**
