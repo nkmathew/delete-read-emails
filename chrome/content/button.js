@@ -98,6 +98,7 @@ let FolderListener = {
     let prefLabel = DeleteReadEmails.getPreference('buttonlabel').trim();
     let buttonLabel = stringBundle.getString('buttonLabel');
     let readEmails = DeleteReadEmails.countReadEmails();
+    let toolbarButton = document.getElementById('btn-delete-read-emails');
     // Use custom button label if defined by the user
     if (prefLabel.length !== 0) {
       buttonLabel = prefLabel;
@@ -105,7 +106,12 @@ let FolderListener = {
     if (DeleteReadEmails.getPreference('showcount')) {
       buttonLabel = `${buttonLabel} (${readEmails})`;
     }
-    document.getElementById('btn-delete-read-emails').label = buttonLabel;
+    if (DeleteReadEmails.getPreference('boldlabel')) {
+      toolbarButton.style.fontWeight = 'bold';
+    } else {
+      toolbarButton.style.fontWeight = '';
+    }
+    toolbarButton.label = buttonLabel;
   }
 };
 

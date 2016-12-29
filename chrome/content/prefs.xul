@@ -24,11 +24,18 @@
         id="showcount"
         name="extensions.delete-read-emails.showcount"
         type="bool"/>
+      <preference
+        id="boldlabel"
+        name="extensions.delete-read-emails.boldlabel"
+        type="bool"/>
     </preferences>
     <groupbox>
       <checkbox
         preference="showcount"
         label="&delete-read-emails.prefs.checkboxlabel;"/>
+      <checkbox
+        preference="boldlabel"
+        label="&delete-read-emails.prefs.boldlabel;"/>
     </groupbox>
     <groupbox>
       <vbox>

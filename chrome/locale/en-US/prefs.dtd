@@ -2,3 +2,4 @@
 <!ENTITY delete-read-emails.prefs.checkboxlabel "Show the number of read emails in the toolbar button">
 <!ENTITY delete-read-emails.prefs.placeholder "Enter label for toolbar button">
 <!ENTITY delete-read-emails.prefs.windowtitle "Delete Read Emails: Preferences">
+<!ENTITY delete-read-emails.prefs.boldlabel "Bold button label">
