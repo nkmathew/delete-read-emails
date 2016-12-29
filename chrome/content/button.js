@@ -36,8 +36,8 @@ DeleteReadEmails.inspect = function(object, own = true) {
  * Returns the number of read emails in the current folder
  */
 DeleteReadEmails.countReadEmails = function() {
-  let enumMessages = gFolderDisplay.displayedFolder.messages;
-  let iterMsgHeaders = fixIterator(enumMessages, Ci.nsIMsgDBHdr);
+  const enumMessages = gFolderDisplay.displayedFolder.messages;
+  const iterMsgHeaders = fixIterator(enumMessages, Ci.nsIMsgDBHdr);
   let readCount = 0;
   for (let msgHeader in iterMsgHeaders) {
     if (msgHeader.isRead) {
@@ -51,11 +51,11 @@ DeleteReadEmails.countReadEmails = function() {
  * Toolbar button callback function
  */
 DeleteReadEmails.deleteReadEmails = function() {
-  let treeView = gDBView.QueryInterface(Ci.nsITreeView);
-  let count = treeView.rowCount;
-  let messenger = Cc['@mozilla.org/messenger;1'].createInstance(Ci.nsIMessenger);
+  const treeView = gDBView.QueryInterface(Ci.nsITreeView);
+  const count = treeView.rowCount;
+  const messenger = Cc['@mozilla.org/messenger;1'].createInstance(Ci.nsIMessenger);
   for (let i = 0; i < count; i++) {
-    let msgHeader = messenger.msgHdrFromURI(gDBView.getURIForViewIndex(i));
+    const msgHeader = messenger.msgHdrFromURI(gDBView.getURIForViewIndex(i));
     if (msgHeader.isRead) {
       treeView.selection.rangedSelect(i, i, true);
     }
@@ -67,9 +67,9 @@ DeleteReadEmails.deleteReadEmails = function() {
  * Reads preferences set in about:config
  */
 DeleteReadEmails.getPreference = function(name) {
-  let prefs = Cc['@mozilla.org/preferences-service;1']
+  const prefs = Cc['@mozilla.org/preferences-service;1']
     .getService(Components.interfaces.nsIPrefService);
-  let branch = prefs.getBranch('extensions.delete-read-emails.');
+  const branch = prefs.getBranch('extensions.delete-read-emails.');
   if (branch.getPrefType(name) === branch.PREF_BOOL) {
     return branch.getBoolPref(name);
   } else if (branch.getPrefType(name) === branch.PREF_STRING) {
@@ -83,7 +83,7 @@ DeleteReadEmails.getPreference = function(name) {
  * count and displays the number of read messages in the add-on's toolbar button
  *
  */
-let FolderListener = {
+const FolderListener = {
   /**
    * https://dxr.mozilla.org/comm-central/source/mailnews/base/public/nsIFolderListener.idl#33
    * void OnItemIntPropertyChanged(in nsIMsgFolder aItem,
@@ -94,11 +94,11 @@ let FolderListener = {
    */
   OnItemIntPropertyChanged: function() {
     // Calculate the number of read emails everytime a message is marked as read
-    let stringBundle = document.getElementById('strings-delete-read-emails');
-    let prefLabel = DeleteReadEmails.getPreference('buttonlabel').trim();
+    const stringBundle = document.getElementById('strings-delete-read-emails');
+    const prefLabel = DeleteReadEmails.getPreference('buttonlabel').trim();
+    const readEmails = DeleteReadEmails.countReadEmails();
+    const toolbarButton = document.getElementById('btn-delete-read-emails');
     let buttonLabel = stringBundle.getString('buttonLabel');
-    let readEmails = DeleteReadEmails.countReadEmails();
-    let toolbarButton = document.getElementById('btn-delete-read-emails');
     // Use custom button label if defined by the user
     if (prefLabel.length !== 0) {
       buttonLabel = prefLabel;
@@ -115,7 +115,7 @@ let FolderListener = {
   }
 };
 
-let mailSession = Cc['@mozilla.org/messenger/services/session;1']
+const mailSession = Cc['@mozilla.org/messenger/services/session;1']
   .getService(Ci.nsIMsgMailSession);
 
 // Register the listener
