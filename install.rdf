@@ -12,11 +12,12 @@
     <em:icon64URL>chrome://delete-read-emails/content/images/delete-64x64.png</em:icon64URL>
     <em:description>Adds a button in Thunderbird's toolbar that enables you to delete all your read emails at once</em:description>
     <em:optionsURL>chrome://delete-read-emails/content/prefs.xul</em:optionsURL>
+    <em:type>2</em:type>
     <em:targetApplication>
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>1.5</em:minVersion>
-        <em:maxVersion>45.5.*</em:maxVersion>
+        <em:maxVersion>50.*</em:maxVersion>
       </Description>
     </em:targetApplication>
     <em:localized>
