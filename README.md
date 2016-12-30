@@ -4,9 +4,6 @@ Thunderbird extension that deletes all the read emails in the currently selected
 Thunderbird folder with a click of a button. Created because I seem to be the only
 one who has a need for this functionality or I'm somehow doing this the wrong way.
 
-How does everyone else delete the 30+ read emails over and over without selecting
-and hitting delete every time?
-
 ### Development
 
 - Tools:
@@ -28,8 +25,7 @@ and hitting delete every time?
 
 ### Installation
 
-Until I can get the add-on to be approved for **AMO** you'll have to install it
-manually by building the **XPI** and drag-dropping it in the Add-ons Manager
+Official channel: [addons.mozilla.org][8]
 
 The toolbar button usually doesn't appear on first run meaning you'll have to right
 click on the mail toolbar, click customize and drag and drop the icon to the toolbar
@@ -74,3 +70,4 @@ Icon by [Seanau][7]
 [5]: https://dxr.mozilla.org/comm-central/source/
 [6]: https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Thunderbird_API_documentation
 [7]: http://www.iconarchive.com/show/email-icons-by-seanau/Delete-icon.html
+[8]: https://addons.mozilla.org/en-US/firefox/addon/delete-read-emails/
