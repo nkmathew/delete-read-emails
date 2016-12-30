@@ -1,3 +1,9 @@
+### Next Release
+
++ Fixes:
+
+  - Use ES6 `const` over `let` where possible
+
 ### v0.2.1 - December 29, 2016
 
 + Fixes:
