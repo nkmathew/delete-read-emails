@@ -1,3 +1,7 @@
+[![Users][9]][8]
+[![Rating][10]][12]
+[![Stars][11]][8]
+
 ### Delete Read Emails
 
 Thunderbird extension that deletes all the read emails in the currently selected
@@ -71,3 +75,7 @@ Icon by [Seanau][7]
 [6]: https://developer.mozilla.org/en-US/docs/Mozilla/Thunderbird/Thunderbird_API_documentation
 [7]: http://www.iconarchive.com/show/email-icons-by-seanau/Delete-icon.html
 [8]: https://addons.mozilla.org/en-US/firefox/addon/delete-read-emails/
+[9]: https://img.shields.io/amo/users/delete-read-emails.svg
+[10]: https://img.shields.io/amo/rating/delete-read-emails.svg
+[11]: https://img.shields.io/amo/stars/delete-read-emails.svg
+[12]: https://addons.mozilla.org/en-US/firefox/addon/delete-read-emails/reviews/
