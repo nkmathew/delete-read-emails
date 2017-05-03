@@ -55,7 +55,16 @@ DeleteReadEmails.deleteReadEmails = function() {
   const count = treeView.rowCount;
   const messenger = Cc['@mozilla.org/messenger;1'].createInstance(Ci.nsIMessenger);
   for (let i = 0; i < count; i++) {
-    const msgHeader = messenger.msgHdrFromURI(gDBView.getURIForViewIndex(i));
+    let viewURI;
+    // Thread headers/expandos get iterated over when the message folder is grouped
+    // by the sort criteria, in which case trying to get a header from it will throw
+    // an exception
+    try {
+      viewURI = gDBView.getURIForViewIndex(i);
+    } catch(ex) {
+      continue;
+    }
+    const msgHeader = messenger.msgHdrFromURI(viewURI);
     if (msgHeader.isRead) {
       treeView.selection.rangedSelect(i, i, true);
     }

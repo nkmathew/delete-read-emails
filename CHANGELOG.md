@@ -1,8 +1,10 @@
-### Next Release
+### Latest
 
 + Fixes:
 
   - Use ES6 `const` over `let` where possible
+  - Handle exception thrown when trying to get headers from grouped messages
+
 
 ### v0.2.1 - December 29, 2016
 
