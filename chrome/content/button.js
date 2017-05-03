@@ -36,6 +36,9 @@ DeleteReadEmails.inspect = function(object, own = true) {
  * Returns the number of read emails in the current folder
  */
 DeleteReadEmails.countReadEmails = function() {
+  if (!gFolderDisplay.displayedFolder) {
+    return -1;
+  }
   const enumMessages = gFolderDisplay.displayedFolder.messages;
   const iterMsgHeaders = fixIterator(enumMessages, Ci.nsIMsgDBHdr);
   let readCount = 0;
